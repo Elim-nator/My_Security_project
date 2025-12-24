@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva's Project | Network Security</title>
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --bg: #0a0b10;
+            --card-bg: #161b22;
+            --text: #e6edf3;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #001f3f, #00d4ff);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #30363d;
+        }
+        h1, h2 { color: var(--primary); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .tool-card {
+            background: #21262d;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+        }
+        .ips-badge {
+            background: #ff4136;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .ids-badge {
+            background: #2ecc40;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        footer { text-align: center; padding: 2rem; color: #8b949e; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Atharva's Security Infrastructure</h1>
+    <p>Advanced Intrusion Detection & Prevention System</p>
+</header>
+
+<div class="container">
+    <div class="section">
+        <h2>Project Overview</h2>
+        <p>This project implements a multi-layered security architecture designed to monitor network traffic, identify vulnerabilities, and automatically mitigate threats in real-time. By combining industry-standard tools, the system provides 360-degree visibility into infrastructure health and security posture.</p>
+    </div>
+
+    <h2>Detection & Monitoring (IDS)</h2>
+    <div class="grid">
+        <div class="tool-card">
+            <h3>Suricata <span class="ids-badge">IDS</span></h3>
+            <p>A high-performance Network Threat Detection engine. It performs real-time intrusion detection (IDS) and network security monitoring (NSM) by inspecting packets for known malicious signatures.</p>
+        </div>
+        <div class="tool-card">
+            <h3>Nagios <span class="ids-badge">Monitoring</span></h3>
+            <p>The "eyes" of the infrastructure. Nagios monitors host availability, service states, and system resources, alerting the administrator of any downtime or performance bottlenecks.</p>
+        </div>
+        <div class="tool-card">
+            <h3>ELK Stack <span class="ids-badge">Logging</span></h3>
+            <p>Comprising Elasticsearch, Logstash, and Kibana. This stack centralizes logs from all sources, allowing for complex data visualization and forensic analysis of security events.</p>
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 2rem;">
+        <h2>Active Response (IPS)</h2>
+        <div class="tool-card">
+            <h3>Fail2Ban <span class="ips-badge">IPS</span></h3>
+            <p>The primary Intrusion Prevention tool. It monitors system logs for signs of brute-force attacks or suspicious patterns and dynamically updates firewall rules to ban offending IP addresses before they gain access.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Workflow</h2>
+        <ol>
+            <li><strong>Traffic Analysis:</strong> Suricata monitors incoming packets for threats.</li>
+            <li><strong>Data Centralization:</strong> Logs are parsed by Logstash and indexed in Elasticsearch.</li>
+            <li><strong>Visualization:</strong> Kibana provides dashboards for real-time security monitoring.</li>
+            <li><strong>Automated Defense:</strong> Fail2Ban detects repeated failures and triggers IP bans via iptables/nftables.</li>
+            <li><strong>Health Checks:</strong> Nagios ensures all security services remain operational.</li>
+        </ol>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Atharva's Security Project Portfolio. Built for Cyber Security Excellence.
+</footer>
+
+</body>
+</html>
+
