@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div style="position:fixed; top:10px; right:10px; background:#00ff00; padding:10px; border-radius:5px;">
+        🚀 Deployed: {{ moment().format('YYYY-MM-DD HH:mm:ss') }} 
+        <br>Build: <span id="build">{{ BUILD_NUMBER or 'LOCAL' }}</span>
+    </div>
+
     <div class="container">
         <h1>🕵️ Information Gathering System</h1>
         

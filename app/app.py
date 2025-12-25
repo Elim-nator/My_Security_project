@@ -44,6 +44,8 @@ def gather_info():
     conn.close()
     
     return jsonify(intel)
+    # 🚀 AUTO-DEPLOY TEST - Build #${BUILD_NUMBER}
+    print("🔥 Security Intel Gathering App - Live from Jenkins CI/CD!")
 
 @app.route('/intel')
 def view_intel():
